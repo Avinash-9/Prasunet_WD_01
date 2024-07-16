@@ -1,0 +1,91 @@
+/* Reset and general styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    margin: 0;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  #main-nav {
+    text-align: center;
+  }
+  
+  #main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #main-nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  #main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  #main-nav ul li a:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ff7f50;
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  #main-nav ul li a:hover:before {
+    width: calc(100% - 30px);
+    left: 15px;
+  }
+  
+  #main-nav ul li a:hover {
+    color: #ff7f50;
+    transform: translateY(-3px);
+  }
+  
+  .content {
+    margin-top: 60px; /* Ensure content starts below fixed header */
+    padding: 20px;
+  }
+  
+  /* Section styles (for demo) */
+  section {
+    background-color: #fff;
+    padding: 40px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  section h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
